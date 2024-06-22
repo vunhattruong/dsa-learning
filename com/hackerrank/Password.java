@@ -46,7 +46,6 @@ public class Password {
     }
 
     public static void main (String[] args) {
-        Password password = new Password();
-        System.out.println(password.minimumNumber(9, "#HackerRank"));
+        System.out.println(Password.minimumNumber(9, "#HackerRank"));
     }
 }

@@ -68,7 +68,6 @@ public class PermuteTwoArray {
     }
 
     public static void main (String[] args) {
-        PermuteTwoArray permuteTwoArray = new PermuteTwoArray();
         System.out.println(caesarCipher2("middle-Outz", 2));
     }
 }

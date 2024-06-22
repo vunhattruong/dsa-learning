@@ -22,8 +22,7 @@ public class ShortString {
     }
 
     public static void main (String[] args) {
-        ShortString s = new ShortString();
-        System.out.println(s.superReducedString(
+        System.out.println(ShortString.superReducedString(
             "zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh"));
     }
 }

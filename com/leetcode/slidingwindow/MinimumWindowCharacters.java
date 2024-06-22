@@ -22,9 +22,6 @@ public class MinimumWindowCharacters {
     public String minWindow(String s, String t) {
         char[] charS = s.toCharArray();
         char[] charT = t.toCharArray();
-        int left = 0;
-        int right = 0;
-        String result;
         if (charS.length == 0 || charT.length == 0 || charT.length < charS.length) {
             return "";
         }

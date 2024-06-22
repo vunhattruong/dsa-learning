@@ -39,8 +39,7 @@ public class MatchingStrings {
     }
 
     public static void main (String[] args) {
-        MatchingStrings matchingStrings = new MatchingStrings();
-        matchingStrings.matchingStrings(Arrays.asList("abcde"
+        MatchingStrings.matchingStrings(Arrays.asList("abcde"
             , "sdaklfj"
             , "asdjf"
             , "na"
