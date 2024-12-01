@@ -34,21 +34,13 @@ import java.util.Map;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-        // build the hashmap to set the value of nums being key and the index is value
         Map<Integer, Integer> numMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            numMap.put(nums[i], i);
-        }
-        // solution to find the result by:
-        // calculate the total = target - nums[i]
-        // then check the total contains in map key
-        // if true => and check the value of the total in map vs the current index
-        // if true => return (the current index ; the total value in the map)
-        for (int i = 0; i < nums.length; i++) {
             int total = target - nums[i];
-            if ( numMap.containsKey(total) && numMap.get(total) != i ) {
-                return new int[] { i, numMap.get(total) };
+            if (numMap.containsKey(total) && numMap.get(total) != i) {
+                return new int[]{numMap.get(total), i};
             }
+            numMap.put(nums[i], i);
         }
         return null;
     }
