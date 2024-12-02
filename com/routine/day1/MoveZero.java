@@ -21,29 +21,27 @@ Constraints:
 
 public class MoveZero {
 
-    public int[] moveZeros(int[] nums) {
+    public void moveZeros(int[] nums) {
         int left = 0;
-        int index = 0;
+        int right = 0;
         int length = nums.length;
-        if (nums.length == 1 && nums[0] == 0) {
-            return new int[]{0};
-        }
-        int[] result = new int[length];
-        while (left < length) {
-            if (nums[left] != 0) {
-                result[index] = nums[left];
-                index++;
+        while (right < length) {
+            if (nums[right] != 0) {
+                int tempt = nums[left];
+                nums[left] = nums[right];
+                nums[right] = tempt;
+                left++;
             }
-            left++;
+            right++;
         }
-        return result;
+        System.out.println(Arrays.toString(nums));
     }
 
     public static void main(String[] args) {
         int[] nums = {0, 1, 0, 3, 12};
         int[] nums1 = {0};
         MoveZero solution = new MoveZero();
-        System.out.println(Arrays.toString(solution.moveZeros(nums)));
-        System.out.println(Arrays.toString(solution.moveZeros(nums1)));
+        solution.moveZeros(nums);
+        solution.moveZeros(nums1);
     }
 }
