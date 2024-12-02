@@ -28,10 +28,10 @@ public class MajorityElement {
         Map<Integer, Integer> numMap            = new HashMap<>();
         int                   majorityCondition = nums.length / 2;
         int                   result            = 0;
-        for (int i = 0; i < nums.length; i++) {
-            numMap.put(nums[i], numMap.getOrDefault(nums[i], 0) + 1);
-            if ( numMap.containsKey(nums[i]) && numMap.get(nums[i]) > majorityCondition ) {
-                result = nums[i];
+        for (int num : nums) {
+            numMap.put(num, numMap.getOrDefault(num, 0) + 1);
+            if (numMap.containsKey(num) && numMap.get(num) > majorityCondition) {
+                result = num;
                 return result;
             }
         }
