@@ -18,6 +18,7 @@ Constraints:
 1 <= nums.length <= 104
 -231 <= nums[i] <= 231 - 1
  */
+
 public class MoveZero {
 
     public int[] moveZeros(int[] nums) {
