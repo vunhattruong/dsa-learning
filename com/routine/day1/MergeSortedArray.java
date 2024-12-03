@@ -40,24 +40,24 @@ nums2.length == n
 public class MergeSortedArray {
 
     public void merge (int[] nums1, int m, int[] nums2, int n) {
-        if ( m == 0 ) {
-            System.out.println(Arrays.toString(nums2));
+        // Brute-force solution
+        // create a new array by sum of m and n
+        int[] result = new int[m + n];
+        // add element of nums1 to result array
+        for (int i = 0; i < m; i++) {
+            result[i] = nums1[i];
         }
-        else if ( n == 0 ) {
-            System.out.println(Arrays.toString(nums1));
+        // add element of nums2 to result array
+        for (int i = 0; i < n; i++) {
+            result[m + i] = nums2[i];
         }
-        else {
-            int left = 0, right = 0;
-            while ( left < nums1.length && right < nums2.length ) {
-                if ( nums1[left] == 0 ) {
-                    nums1[left] = nums2[right];
-                    right++;
-                }
-                left++;
-            }
-            Arrays.sort(nums1);
-            System.out.println(Arrays.toString(nums1));
+        // sort array by using Arrays.sort() method
+        Arrays.sort(result);
+        // add element sorted in result array into nums1 array back
+        for (int i = 0; i < result.length; i++) {
+            nums1[i] = result[i];
         }
+        System.out.println(Arrays.toString(nums1));
     }
 
     public static void main (String[] args) {
