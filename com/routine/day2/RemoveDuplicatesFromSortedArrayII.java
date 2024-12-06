@@ -38,6 +38,9 @@ nums is sorted in non-decreasing order.
  */
 public class RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] nums) {
+        if(nums == null || nums.length < 2) {
+            return 0;
+        }
         int left = 2;
         int right;
         for (right = 2; right < nums.length; right++) {
